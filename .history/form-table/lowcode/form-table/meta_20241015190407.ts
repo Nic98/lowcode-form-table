@@ -29,7 +29,7 @@ const FormTableMeta: IPublicTypeComponentMetadata = {
         "setter": {
           "componentName": "StringSetter",
           "isRequired": true,
-          "initialValue": "proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100"
+          "initialValue": "https://proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100"
         }
       },
       {

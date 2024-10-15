@@ -73,7 +73,7 @@ const ExampleComponent = (props: ComponentProps, ref: any) => {
                 onClick={() => {
                   console.log(name, id);
                   const xhr = new XMLHttpRequest();
-                  xhr.open("GET", `https://${api || `proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100`}/${name}${id}`, true);
+                  xhr.open("GET", (`https://${api || `https:proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100`), true);
                   xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                       const res = JSON.parse(xhr.responseText);

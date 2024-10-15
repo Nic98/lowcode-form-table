@@ -5,6 +5,8 @@ import { Button, Form, Input } from 'antd';
 
 
 interface ComponentProps {
+  name: string;
+  id: string;
   api?: string;
   type?: string;
 }
@@ -23,13 +25,14 @@ const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo:any) =
 };
 
 const ExampleComponent = (props: ComponentProps, ref: any) => {
-  const { api, type='tableForm', ...others } = props;
-
-  const [name, setName] = useState('');
-  const [id, setId] = useState('');
+  const { name, id, api, type='tableForm', ...others } = props;
+  console.log(name)
+  console.log(type);
+  const [s_name, setName] = useState(name);
+  const [s_id, setId] = useState(id);
 
   return (
-    <div className="lowcode-spa-queryform" ref={ref}>
+    <div className="lowcode-spa-queryform">
       <Form
           name="basic"
           labelCol={{ span: 8 }}
@@ -48,7 +51,9 @@ const ExampleComponent = (props: ComponentProps, ref: any) => {
             <Input
               onChange={(v:any) => {
               setName(v.target.value);
+              
             }}
+            value={name}
           />
             
           </Form.Item>
@@ -61,19 +66,19 @@ const ExampleComponent = (props: ComponentProps, ref: any) => {
               onChange={(v: any) => {
               setId(v.target.value);
               }}
+              value={id}
             />
           </Form.Item>
         
           {
-            type === 'tableForm' ? (
+            listType === 'tableForm' ? (
               <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Button
                 type="primary"
                 htmlType="submit"
                 onClick={() => {
-                  console.log(name, id);
                   const xhr = new XMLHttpRequest();
-                  xhr.open("GET", `https://${api || `proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100`}/${name}${id}`, true);
+                  xhr.open("GET", (api || "https://proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100"), true);
                   xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                       const res = JSON.parse(xhr.responseText);

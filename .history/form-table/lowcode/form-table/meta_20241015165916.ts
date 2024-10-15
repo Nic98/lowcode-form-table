@@ -21,36 +21,35 @@ const FormTableMeta: IPublicTypeComponentMetadata = {
         "title": {
           "label": {
             "type": "i18n",
-            "en-US": "API",
-            "zh-CN": "接口"
+            "en-US": "名称",
+            "zh-CN": "名称"
           }
         },
-        "name": "api",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": true,
-          "initialValue": "proapi.azurewebsites.net/api/rule?token%20=%20123&current=1&pageSize=100"
-        }
+        // "name": "name",
+        // "setter": {
+        //   "componentName": "StringSetter",
+        //   "isRequired": true,
+        //   "initialValue": ""
+        // }
       },
       {
-        title: {
-          label: {
-            type: "i18n",
-            "en-US": "List Type",
-            "zh-CN": "列表类型"
+        "title": {
+          "label": {
+            "type": "i18n",
+            "en-US": "ID",
+            "zh-CN": "ID"
           }
         },
-        name: "type",
-        setter: {
-          componentName: "SelectSetter",
-          props: {
-            mode: "single",
-            options: [
-              {label: 'Table Form', value: 'tableForm'},
-              {label: 'List Form', value: 'listForm'}],
-            defaultvValue: "tableForm",
-          },
-          initialValue: "tableForm",
+        // "name": "ID",
+        // "setter": {
+        //   "componentName": "StringSetter",
+        //   "isRequired": true,
+        //   "initialValue": ""
+        // }
+      },
+      {
+        "title": {
+          
         }
       }
     ],
