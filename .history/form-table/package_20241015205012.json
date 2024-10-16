@@ -1,5 +1,5 @@
 {
-  "name": "form-table-rubber",
+  "name": "form-table",
   "version": "0.1.0",
   "description": "form-table",
   "files": [
@@ -79,11 +79,11 @@
     "name": "ExampleComponent",
     "title": "demo component",
     "category": "Information",
-    "materialSchema": "https://unpkg.com/form-table-rubber@0.1.0/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/form-table@0.1.0/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/form-table-rubber@0.1.0/build/index.html"
+  "homepage": "https://unpkg.com/form-table@0.1.0/build/index.html"
 }
