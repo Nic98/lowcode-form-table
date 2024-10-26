@@ -1,5 +1,5 @@
 {
-  "library": "BizCompForm",
+  "library": "BizComp",
   "plugins": [
     "build-plugin-component",
     "build-plugin-fusion",
